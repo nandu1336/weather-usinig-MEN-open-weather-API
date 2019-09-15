@@ -1,0 +1,60 @@
+doctype html
+html
+  head
+    title= title
+
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    meta(charset="utf-8")
+    
+    meta(name="description" content="")
+    meta(name="author" content="")
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    link(href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css')
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    link(rel="stylesheet" href="/css/normalize.css")
+    link(rel="stylesheet" href="/css/skeleton.css")
+    link(rel="stylesheet" href="css/custom.css")
+
+    <!-- Scripts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    script(src = "js/jquery.js")
+    script(type='text/javascript' src='js/scripts.js')
+    
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    link(rel="icon" type="image/png" href="/images/favicon.png")
+    link(rel='stylesheet', href='/css/style.css')
+    
+  body(class="container")
+    div(class="container navigation")
+      div(class="row navigation-menu")
+        div(class="three columns nav-item u-pull-left")
+          h3 
+            a(class="button " href='/')
+              p Home
+        div(class="three columns nav-item")
+          h3 
+            a(class="button " href='/weather')
+              p Weather
+        div(class="three columns nav-item")
+          h3 
+            a(class="button " href='/menu')
+              p Menu      
+        div(class="three columns nav-item  u-pull-right")
+          h3 
+          -if(user == null)          
+            a(class="button" href='/login')
+              p Login
+          -else
+            a(class="button" href='/logout')
+              p logout
+    block content

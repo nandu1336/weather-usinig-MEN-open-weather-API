@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    div(class="container login-background-div")
+        div(class="container form")
+            form(action="/login" method="POST")
+                div(class="row")
+                    div(class="ten columns block")
+                        label(for="exampleEmailInput") Your email
+                        input(class="u-full-width" type="text" name="username" placeholder="Username or email" id="username")
+                div(class="row")
+                    div(class="ten columns block")
+                        label(for="exampleEmailInput") password
+                        input(class="u-full-width" type="password" name="password" placeholder="Password" id="password")
+                div(class="row")
+                    br
+                    input(class="button-primary center" type="submit" value="Submit")

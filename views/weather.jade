@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    div
+        div
+            h1= title
+            p welcome to #{title}
+        div(class="container ")
+            div
+                div(class="row")
+                    //- div(class="five columns")
+                    //- div(class="five columns")
+                    input(class="six columns" type="search"  id="search_ur_city" placeholder="enter your city")
+                    input(class="three columns button" id="search" type="submit" value="search")
+                    input(class="six columns" type="text"  id="input" placeholder="enter your city")
+            div(class="row")
+                div(class="six columns")
+                    p(id="coord")
+                div(class="six columns")
+                    p(id="main")
+            div(class="row")
+                div(class="six columns")
+                    p(id="wind")
+                div(class="six columns")
+                    p(id="weather")
