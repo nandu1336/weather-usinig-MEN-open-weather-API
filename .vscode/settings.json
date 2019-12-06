@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/8cdb3b94-31c0-4db7-a9b9-7f2a40043aa0/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/nk-app",
+    "appService.deploySubpath": ""
+}
