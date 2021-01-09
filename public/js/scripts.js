@@ -2,16 +2,18 @@ var APIurl = "https://api.openweathermap.org/data/2.5/weather?q="
 var query;
 var key = "&appid=e4a84ee8052e1f5cc27dfc8b14b8fa94";
 var APIurl2 = "https://pro.openweathermap.org/data/2.5/climate/month?id=2643743&appid=e4a84ee8052e1f5cc27dfc8b14b8fa94"
-$(document).ready(function() {
-    $('#search_ur_city').keyup(function() {
+
+
+$(document).ready(function () {
+    $('#search_ur_city').on('keyup', (function () {
         var city = $('#search_ur_city').val();
         query = APIurl + city + key;
         $('#input').val(query);
 
-    })
+    }))
 
-    $('#search').click(function() {
-        $.get(query, function(data) {
+    $('#search').on('click', (function () {
+        $.get(query, function (data) {
             var str = " ";
 
             for (item in data.main) {
@@ -49,7 +51,7 @@ $(document).ready(function() {
             $('#weather').html(str);
 
         });
-    });
+    }));
 });
 
 var trace1 = {
